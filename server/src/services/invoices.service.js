@@ -70,9 +70,11 @@ export async function getInvoice(idOrInvoiceNo) {
       select i.invoice_no, i.invoice_date, i.total_amount, i.vat, i.amount_due,
              c.code as customer_code, c.name as customer_name,
              c.address_line1, c.address_line2,
-             co.name as country_name
+             co.name as country_name,
+             s.name as sales_person_name,
       from invoice i
       join customer c on c.id = i.customer_id
+      join sales_person s on s.id = i.sales_person_id
       left join country co on co.id = c.country_id
       where i.id = $1
     `,
