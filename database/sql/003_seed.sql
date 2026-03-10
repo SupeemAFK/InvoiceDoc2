@@ -5,6 +5,18 @@
 
 -- ==========================================
 
+INSERT INTO sales_person (id, code, name, start_work_date) VALUES
+(1, 'SP001', 'Alice Thompson', '2018-03-15'),
+(2, 'SP002', 'Marcus Chen', '2019-06-22'),
+(3, 'SP003', 'Elena Rodriguez', '2020-01-10'),
+(4, 'SP004', 'Julian Vane', '2021-11-05'),
+(5, 'SP005', 'Sarah Jenkins', '2022-04-30'),
+(6, 'SP006', 'Kevin Brien', '2022-09-12'),
+(7, 'SP007', 'Priya Sharma', '2023-02-28'),
+(8, 'SP008', 'Leo Maxwell', '2023-07-19'),
+(9, 'SP009', 'Zoe Faulkner', '2024-01-05'),
+(10,'SP010', 'Derek Wright', '2024-05-20');
+
 -- Populating table: country
 INSERT INTO country (id, created_at, code, name) VALUES (1, '2026-01-12 17:19:44.412559+00', 'TH', 'Thailand') ON CONFLICT DO NOTHING;
 INSERT INTO country (id, created_at, code, name) VALUES (3, '2026-01-12 17:20:38.972804+00', 'SG', 'Singapore') ON CONFLICT DO NOTHING;
@@ -53,57 +65,57 @@ INSERT INTO product (id, created_at, code, name, units_id, unit_price) VALUES (2
 INSERT INTO product (id, created_at, code, name, units_id, unit_price) VALUES (23, '2026-01-19 11:08:00+00:00', 'P219', 'Eraser Pack', 2, 75) ON CONFLICT DO NOTHING;
 
 -- Populating table: invoice
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (2, '2026-01-19 09:41:22.414284+00', 'INV-001', '1/19/2026', 1, 300, 21, 321) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (3, '2026-02-09 06:48:00+00:00', 'INV-002', '1/3/2026', 3, 2027.5, 141.93, 2169.43) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (4, '2026-02-09 06:49:00+00:00', 'INV-003', '12/25/2025', 6, 564.19, 39.49, 603.68) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (5, '2026-02-09 06:50:00+00:00', 'INV-004', '11/30/2025', 7, 709, 49.63, 758.63) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (6, '2026-02-09 06:51:00+00:00', 'INV-005', '12/16/2025', 5, 2299.13, 160.94, 2460.07) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (7, '2026-02-09 06:52:00+00:00', 'INV-006', '11/25/2025', 5, 2723.06, 190.61, 2913.67) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (8, '2026-02-09 06:53:00+00:00', 'INV-007', '1/16/2026', 4, 3160, 221.2, 3381.2) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (9, '2026-02-09 06:54:00+00:00', 'INV-008', '1/6/2026', 9, 1659, 116.13, 1775.13) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (10, '2026-02-09 06:55:00+00:00', 'INV-009', '12/13/2025', 4, 486, 34.02, 520.02) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (11, '2026-02-09 06:56:00+00:00', 'INV-010', '1/2/2026', 8, 5107.5, 357.53, 5465.03) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (12, '2026-02-09 06:57:00+00:00', 'INV-011', '1/4/2026', 8, 3375.38, 236.28, 3611.66) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (13, '2026-02-09 06:58:00+00:00', 'INV-012', '12/9/2025', 2, 759.88, 53.19, 813.07) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (14, '2026-02-09 06:59:00+00:00', 'INV-013', '12/22/2025', 3, 1315.25, 92.07, 1407.32) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (15, '2026-02-09 07:00:00+00:00', 'INV-014', '12/16/2025', 1, 2754.5, 192.82, 2947.32) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (16, '2026-02-09 07:01:00+00:00', 'INV-015', '11/23/2025', 1, 525.25, 36.77, 562.02) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (17, '2026-02-09 07:02:00+00:00', 'INV-016', '1/1/2026', 7, 2275, 159.25, 2434.25) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (18, '2026-02-09 07:03:00+00:00', 'INV-017', '12/18/2025', 9, 182, 12.74, 194.74) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (19, '2026-02-09 07:04:00+00:00', 'INV-018', '12/7/2025', 4, 4272.88, 299.1, 4571.98) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (20, '2026-02-09 07:05:00+00:00', 'INV-019', '12/30/2025', 5, 3158.5, 221.1, 3379.6) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (21, '2026-02-09 07:06:00+00:00', 'INV-020', '12/21/2025', 6, 211.25, 14.79, 226.04) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (22, '2026-02-09 07:07:00+00:00', 'INV-021', '12/18/2025', 5, 377.25, 26.41, 403.66) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (23, '2026-02-09 07:08:00+00:00', 'INV-022', '12/16/2025', 5, 5115.57, 358.09, 5473.66) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (24, '2026-02-09 07:09:00+00:00', 'INV-023', '1/6/2026', 6, 328.13, 22.97, 351.1) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (25, '2026-02-09 07:10:00+00:00', 'INV-024', '11/27/2025', 5, 409.25, 28.65, 437.9) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (26, '2026-02-09 07:11:00+00:00', 'INV-025', '12/15/2025', 7, 850.38, 59.53, 909.91) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (27, '2026-02-09 07:12:00+00:00', 'INV-026', '11/30/2025', 1, 2432.25, 170.26, 2602.51) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (28, '2026-02-09 07:13:00+00:00', 'INV-027', '11/25/2025', 3, 364.5, 25.52, 390.02) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (29, '2026-02-09 07:14:00+00:00', 'INV-028', '12/24/2025', 4, 502.25, 35.16, 537.41) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (30, '2026-02-09 07:15:00+00:00', 'INV-029', '11/30/2025', 4, 258.5, 18.1, 276.6) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (31, '2026-02-09 07:16:00+00:00', 'INV-030', '1/2/2026', 6, 2079.76, 145.58, 2225.34) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (32, '2026-02-09 07:17:00+00:00', 'INV-031', '11/30/2025', 6, 873, 61.11, 934.11) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (33, '2026-02-09 07:18:00+00:00', 'INV-032', '12/17/2025', 9, 1959.75, 137.18, 2096.93) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (34, '2026-02-09 07:19:00+00:00', 'INV-033', '12/8/2025', 7, 1226.81, 85.88, 1312.69) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (35, '2026-02-09 07:20:00+00:00', 'INV-034', '12/31/2025', 7, 2512.5, 175.88, 2688.38) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (36, '2026-02-09 07:21:00+00:00', 'INV-035', '12/20/2025', 3, 934.88, 65.44, 1000.32) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (37, '2026-02-09 07:22:00+00:00', 'INV-036', '1/4/2026', 8, 932.75, 65.29, 998.04) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (38, '2026-02-09 07:23:00+00:00', 'INV-037', '11/25/2025', 2, 3182.13, 222.75, 3404.88) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (39, '2026-02-09 07:24:00+00:00', 'INV-038', '12/17/2025', 9, 2405.5, 168.39, 2573.89) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (40, '2026-02-09 07:25:00+00:00', 'INV-039', '12/10/2025', 5, 1449.75, 101.48, 1551.23) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (41, '2026-02-09 07:26:00+00:00', 'INV-040', '12/26/2025', 3, 4281.63, 299.71, 4581.34) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (42, '2026-02-09 07:27:00+00:00', 'INV-041', '1/18/2026', 10, 1683.5, 117.85, 1801.35) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (43, '2026-02-09 07:28:00+00:00', 'INV-042', '12/12/2025', 4, 3185.75, 223, 3408.75) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (44, '2026-02-09 07:29:00+00:00', 'INV-043', '11/27/2025', 8, 3080, 215.6, 3295.6) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (45, '2026-02-09 07:30:00+00:00', 'INV-044', '1/18/2026', 2, 2352.25, 164.66, 2516.91) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (46, '2026-02-09 07:31:00+00:00', 'INV-045', '11/20/2025', 7, 957.25, 67.01, 1024.26) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (47, '2026-02-09 07:32:00+00:00', 'INV-046', '12/9/2025', 1, 606.75, 42.47, 649.22) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (48, '2026-02-09 07:33:00+00:00', 'INV-047', '1/12/2026', 10, 852.5, 59.68, 912.18) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (49, '2026-02-09 07:34:00+00:00', 'INV-048', '12/3/2025', 2, 465, 32.55, 497.55) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (50, '2026-02-09 07:35:00+00:00', 'INV-049', '12/26/2025', 7, 2085, 145.95, 2230.95) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (51, '2026-02-09 07:36:00+00:00', 'INV-050', '12/28/2025', 9, 1141.75, 79.92, 1221.67) ON CONFLICT DO NOTHING;
-INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due) VALUES (52, '2026-02-09 07:37:00+00:00', 'INV-051', '12/27/2025', 8, 7750.25, 542.52, 8292.77) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (2, '2026-01-19 09:41:22.414284+00', 'INV-001', '1/19/2026', 1, 300, 21, 321, 1) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (3, '2026-02-09 06:48:00+00:00', 'INV-002', '1/3/2026', 3, 2027.5, 141.93, 2169.43, 2) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (4, '2026-02-09 06:49:00+00:00', 'INV-003', '12/25/2025', 6, 564.19, 39.49, 603.68, 3) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (5, '2026-02-09 06:50:00+00:00', 'INV-004', '11/30/2025', 7, 709, 49.63, 758.63, 4) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (6, '2026-02-09 06:51:00+00:00', 'INV-005', '12/16/2025', 5, 2299.13, 160.94, 2460.07, 5) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (7, '2026-02-09 06:52:00+00:00', 'INV-006', '11/25/2025', 5, 2723.06, 190.61, 2913.67, 1) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (8, '2026-02-09 06:53:00+00:00', 'INV-007', '1/16/2026', 4, 3160, 221.2, 3381.2, 4) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (9, '2026-02-09 06:54:00+00:00', 'INV-008', '1/6/2026', 9, 1659, 116.13, 1775.13, 7) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (10, '2026-02-09 06:55:00+00:00', 'INV-009', '12/13/2025', 4, 486, 34.02, 520.02, 6) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (11, '2026-02-09 06:56:00+00:00', 'INV-010', '1/2/2026', 8, 5107.5, 357.53, 5465.03, 2) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (12, '2026-02-09 06:57:00+00:00', 'INV-011', '1/4/2026', 8, 3375.38, 236.28, 3611.66, 5) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (13, '2026-02-09 06:58:00+00:00', 'INV-012', '12/9/2025', 2, 759.88, 53.19, 813.07, 1) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (14, '2026-02-09 06:59:00+00:00', 'INV-013', '12/22/2025', 3, 1315.25, 92.07, 1407.32, 1) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (15, '2026-02-09 07:00:00+00:00', 'INV-014', '12/16/2025', 1, 2754.5, 192.82, 2947.32, 6) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (16, '2026-02-09 07:01:00+00:00', 'INV-015', '11/23/2025', 1, 525.25, 36.77, 562.02, 7) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (17, '2026-02-09 07:02:00+00:00', 'INV-016', '1/1/2026', 7, 2275, 159.25, 2434.25, 8) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (18, '2026-02-09 07:03:00+00:00', 'INV-017', '12/18/2025', 9, 182, 12.74, 194.74, 9) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (19, '2026-02-09 07:04:00+00:00', 'INV-018', '12/7/2025', 4, 4272.88, 299.1, 4571.98, 10) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (20, '2026-02-09 07:05:00+00:00', 'INV-019', '12/30/2025', 5, 3158.5, 221.1, 3379.6, 10) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (21, '2026-02-09 07:06:00+00:00', 'INV-020', '12/21/2025', 6, 211.25, 14.79, 226.04, 8) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (22, '2026-02-09 07:07:00+00:00', 'INV-021', '12/18/2025', 5, 377.25, 26.41, 403.66, 9) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (23, '2026-02-09 07:08:00+00:00', 'INV-022', '12/16/2025', 5, 5115.57, 358.09, 5473.66, 1) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (24, '2026-02-09 07:09:00+00:00', 'INV-023', '1/6/2026', 6, 328.13, 22.97, 351.1, 2) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (25, '2026-02-09 07:10:00+00:00', 'INV-024', '11/27/2025', 5, 409.25, 28.65, 437.9, 3) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (26, '2026-02-09 07:11:00+00:00', 'INV-025', '12/15/2025', 7, 850.38, 59.53, 909.91, 4) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (27, '2026-02-09 07:12:00+00:00', 'INV-026', '11/30/2025', 1, 2432.25, 170.26, 2602.51, 5) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (28, '2026-02-09 07:13:00+00:00', 'INV-027', '11/25/2025', 3, 364.5, 25.52, 390.02, 6) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (29, '2026-02-09 07:14:00+00:00', 'INV-028', '12/24/2025', 4, 502.25, 35.16, 537.41, 7) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (30, '2026-02-09 07:15:00+00:00', 'INV-029', '11/30/2025', 4, 258.5, 18.1, 276.6, 1) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (31, '2026-02-09 07:16:00+00:00', 'INV-030', '1/2/2026', 6, 2079.76, 145.58, 2225.34, 2) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (32, '2026-02-09 07:17:00+00:00', 'INV-031', '11/30/2025', 6, 873, 61.11, 934.11, 6) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (33, '2026-02-09 07:18:00+00:00', 'INV-032', '12/17/2025', 9, 1959.75, 137.18, 2096.93, 4) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (34, '2026-02-09 07:19:00+00:00', 'INV-033', '12/8/2025', 7, 1226.81, 85.88, 1312.69, 2) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (35, '2026-02-09 07:20:00+00:00', 'INV-034', '12/31/2025', 7, 2512.5, 175.88, 2688.38, 3) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (36, '2026-02-09 07:21:00+00:00', 'INV-035', '12/20/2025', 3, 934.88, 65.44, 1000.32, 6) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (37, '2026-02-09 07:22:00+00:00', 'INV-036', '1/4/2026', 8, 932.75, 65.29, 998.04, 5) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (38, '2026-02-09 07:23:00+00:00', 'INV-037', '11/25/2025', 2, 3182.13, 222.75, 3404.88, 3) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (39, '2026-02-09 07:24:00+00:00', 'INV-038', '12/17/2025', 9, 2405.5, 168.39, 2573.89, 2) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (40, '2026-02-09 07:25:00+00:00', 'INV-039', '12/10/2025', 5, 1449.75, 101.48, 1551.23, 4) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (41, '2026-02-09 07:26:00+00:00', 'INV-040', '12/26/2025', 3, 4281.63, 299.71, 4581.34, 8) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (42, '2026-02-09 07:27:00+00:00', 'INV-041', '1/18/2026', 10, 1683.5, 117.85, 1801.35, 7) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (43, '2026-02-09 07:28:00+00:00', 'INV-042', '12/12/2025', 4, 3185.75, 223, 3408.75, 6) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (44, '2026-02-09 07:29:00+00:00', 'INV-043', '11/27/2025', 8, 3080, 215.6, 3295.6, 5) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (45, '2026-02-09 07:30:00+00:00', 'INV-044', '1/18/2026', 2, 2352.25, 164.66, 2516.91, 4) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (46, '2026-02-09 07:31:00+00:00', 'INV-045', '11/20/2025', 7, 957.25, 67.01, 1024.26, 3) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (47, '2026-02-09 07:32:00+00:00', 'INV-046', '12/9/2025', 1, 606.75, 42.47, 649.22, 2) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (48, '2026-02-09 07:33:00+00:00', 'INV-047', '1/12/2026', 10, 852.5, 59.68, 912.18, 1) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (49, '2026-02-09 07:34:00+00:00', 'INV-048', '12/3/2025', 2, 465, 32.55, 497.55, 1) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (50, '2026-02-09 07:35:00+00:00', 'INV-049', '12/26/2025', 7, 2085, 145.95, 2230.95, 8) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (51, '2026-02-09 07:36:00+00:00', 'INV-050', '12/28/2025', 9, 1141.75, 79.92, 1221.67, 4) ON CONFLICT DO NOTHING;
+INSERT INTO invoice (id, created_at, invoice_no, invoice_date, customer_id, total_amount, vat, amount_due, sales_person_id) VALUES (52, '2026-02-09 07:37:00+00:00', 'INV-051', '12/27/2025', 8, 7750.25, 542.52, 8292.77, 5) ON CONFLICT DO NOTHING;
 
 -- Populating table: invoice_line_item
 INSERT INTO invoice_line_item (id, created_at, invoice_id, product_id, quantity, unit_price, extended_price) VALUES (1, '2026-01-19 09:42:12.89978+00', 2, 1, 5.0, 20, 100) ON CONFLICT DO NOTHING;
@@ -266,3 +278,4 @@ SELECT setval(pg_get_serial_sequence('customer', 'id'), coalesce(max(id),0) + 1,
 SELECT setval(pg_get_serial_sequence('product', 'id'), coalesce(max(id),0) + 1, false) FROM product;
 SELECT setval(pg_get_serial_sequence('invoice', 'id'), coalesce(max(id),0) + 1, false) FROM invoice;
 SELECT setval(pg_get_serial_sequence('invoice_line_item', 'id'), coalesce(max(id),0) + 1, false) FROM invoice_line_item;
+SELECT setval(pg_get_serial_sequence('sales_person', 'id'), coalesce(max(id),0) + 1, false) FROM sales_person;
